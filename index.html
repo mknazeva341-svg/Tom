@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сборник Приправ-Оберегов</title>
+<style>
+:root {
+  --bg-color: #050705; --paper-color: #f4ebd0; --text-dark: #1c1917;
+  --accent-gold: #b45309; --accent-green: #14532d;
+}
+body {
+  margin:0; padding:15px; background-color:var(--bg-color);
+  font-family:'Georgia',serif; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; min-height:100vh; box-sizing:border-box;
+}
+h1 { color:#d97706; font-size:1.5rem; margin:0 0 5px 0; text-align:center; }
+.subtitle { font-style:italic; color:#71717a; margin-bottom:20px; text-align:center; }
+.book-container { width:100%; max-width:340px; height:500px; position:relative; }
+.page { 
+  width:100%; height:100%; position:absolute; top:0; left:0;
+  background-color:var(--paper-color); color:var(--text-dark); padding:20px; box-sizing:border-box;
+  border-radius:10px; box-shadow:5px 5px 15px rgba(0,0,0,0.5);
+  display:none; flex-direction:column; justify-content:space-between;
+}
+.page.active { display:flex; }
+.cover-page { background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('cover.jpg') center/cover; color:#f5e0b3; justify-content:flex-end; text-align:center; border:2px solid #d97706; }
+.spice-img { width:100%; height:180px; background-size:cover; background-position:center; border-radius:5px; margin:10px 0; border:1px solid rgba(0,0,0,0.2); }
+.page h2 { margin:0; color:#7c2d12; font-size:1.2rem; }
+.page p { font-size:0.85rem; line-height:1.4; margin:10px 0; flex-grow:1; }
+.page-num { text-align:center; font-size:0.8rem; color:#a1a1aa; font-weight:bold; }
+.tg-btn { background-color:var(--accent-green); color:white; text-decoration:none; padding:10px 20px; border-radius:5px; margin-top:20px; font-weight:bold; display:inline-block; }
+</style>
+</head>
+<body>
+<h1>Сборник Приправ-Оберегов</h1>
+<div class="subtitle">Листайте страницы тапом по книге</div>
+
+<div class="book-container" onclick="nextPage()">
+  <!-- ОБЛОЖКА -->
+  <div class="page cover-page active">
+    <h2 style="color:#d97706; border:none; margin-bottom:5px;">ПРИПРАВЫ-ОБЕРЕГИ</h2>
+    <p style="font-style:italic; font-size:0.9rem; color:#e5e5e5;">Магические свойства лесного очага</p>
+    <div style="margin-bottom:15px; font-weight:bold; color:#ff9f00;">ОТКРЫТЬ СБОРНИК →</div>
+  </div>
+
+  <!-- ВВЕДЕНИЕ -->
+  <div class="page">
+    <div>
+      <h2>Введение</h2>
+      <p>«Каждая специя на кухонном очаге — это спящее заклинание. Пробуди его с умом, и дом твой станет крепостью, недоступной для зла». — Из дневников Агаты.</p>
+    </div>
+    <div class="page-num">Вступление</div>
+  </div>
+
+  <!-- СТРАНИЦА 1 -->
+  <div class="page">
+    <div>
+      <h2>1. Магическая Гвоздика</h2>
+      <div class="spice-img" style="background-image:url('gvozdiva.jpg');"></div>
+      <p>Застывшие слезы лесных духов. Защищает жилище от незваных гостей и злых помыслов. Обладает резким, очищающим ауру ароматом.</p>
+    </div>
+    <div class="page-num">1</div>
+  </div>
+
+  <!-- СТРАНИЦА 2 -->
+  <div class="page">
+    <div>
+      <h2>2. Огненная Корица</h2>
+      <div class="spice-img" style="background-image:url('korica.jpg');"></div>
+      <p>Защитная кора проклятых деревьев, обращенная во благо. Разжигает угасающие чувства, дарует тепло дому и притягивает финансовое благополучие.</p>
+    </div>
+    <div class="page-num">2</div>
+  </div>
+
+  <!-- СТРАНИЦА 3 -->
+  <div class="page">
+    <div>
+      <h2>3. Сушёный Тимьян</h2>
+      <div class="spice-img" style="background-image:url('timian.jpg');"></div>
+      <p>Свежий оберег с легкой морской нотой. Вплетается в защитные заговоры, помогая удержать воспоминания и защитить разум от дурных снов.</p>
+    </div>
+    <div class="page-num">3</div>
+  </div>
+
+  <!-- СТРАНИЦА 4 -->
+  <div class="page">
+    <div>
+      <h2>4. Дикий Имбирь</h2>
+      <div class="spice-img" style="background-image:url('imbir.jpg');"></div>
+      <p>Главный корень чащи. Мощный катализатор внутренней силы. Изгоняет из тела остатки чужого сглаза и дарует непоколебимую уверенность.</p>
+    </div>
+    <div class="page-num">4</div>
+  </div>
+
+  <!-- СТРАНИЦА 5 -->
+  <div class="page">
+    <div>
+      <h2>5. Белый Перец</h2>
+      <div class="spice-img" style="background-image:url('perec.jpg');"></div>
+      <p>Вкрадчивая, тонкая защита. Мягкая пикантность оберегает блюда, не затмевая их истинный вкус, и успокаивает бушующие вокруг страсти.</p>
+    </div>
+    <div class="page-num">5</div>
+  </div>
+
+  <!-- СТРАНИЦА 6 -->
+  <div class="page">
+    <div>
+      <h2>6. Прованские Травы</h2>
+      <div class="spice-img" style="background-image:url('travi.jpg');"></div>
+      <p>Ароматный оберег покоя и умиротворения. Сбор трав, исцеляющий душевные раны и привносящий гармонию в семейные вечерние посиделки.</p>
+    </div>
+    <div class="page-num">6</div>
+  </div>
+
+  <!-- СТРАНИЦА 7 -->
+  <div class="page">
+    <div>
+      <h2>7. Сушёный Укроп</h2>
+      <div class="spice-img" style="background-image:url('ukrop.jpg');"></div>
+      <p>Свежая изумрудная зелень. Символ домашнего уюта. Отгоняет ночные страхи у детей, если положить мешочек у изголовья кровати.</p>
+    </div>
+    <div class="page-num">7</div>
+  </div>
+
+  <!-- СТРАНИЦА 8 -->
+  <div class="page">
+    <div>
+      <h2>8. Сушёный Лук</h2>
+      <div class="spice-img" style="background-image:url('luk.jpg');"></div>
+      <p>Базовый защитный элемент. Впитывает в себя негативную энергетику, направленную на дом. Использовать в кулинарной магии ежедневно.</p>
+    </div>
+    <div class="page-num">8</div>
+  </div>
+
+  <!-- СТРАНИЦА 9 -->
+  <div class="page">
+    <div>
+      <h2>9. Золотая Куркума</h2>
+      <div class="spice-img" style="background-image:url('kurkuma.jpg');"></div>
+      <p>Яркий оберег, переливающийся солнечным светом. Символизирует тепло домашнего костра, привлекает благополучие и радость.</p>
+    </div>
+    <div class="page-num">9</div>
+  </div>
+
+  <!-- СТРАНИЦА 10 (ФИНАЛ) -->
+  <div class="page" style="background-color:#e2d9c2;">
+    <div>
+      <h2>Пряное Рагу Агаты</h2>
+      <div class="spice-img" style="background-image:url('ragu.jpg');"></div>
+      <p style="font-size:0.8rem; line-height:1.3;">Финальный рецепт, объединяющий силу всех оберегов. Зажгите свечу, добавьте щепотку любви и защитите свою обитель навсегда.</p>
+    </div>
+    <div class="page-num">Финал ◆</div>
+  </div>
+</div>
+
+<a href="https://t.me" class="tg-btn">Вернуться в обитель Мари</a>
+
+<script>
+let currentPage = 0;
+const pages = document.querySelectorAll('.page');
+function nextPage() {
+  pages[currentPage].classList.remove('active');
+  currentPage = (currentPage + 1) % pages.length;
+  pages[currentPage].classList.add('active');
+}
+</script>
+</body>
+</html>
